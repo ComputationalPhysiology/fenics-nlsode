@@ -18,7 +18,7 @@ setup(
     author="Henrik Finsberg, Cécile Daversin-Catty",
     author_email="henriknf@simula.no",
     maintainer_email="henriknf@simula.no",
-    license="LGPLv3+",
+    license="MIT",
     keywords=["ODE", "solver", "system", "equations", "cuda"],
     install_requires=[
         "numpy",
