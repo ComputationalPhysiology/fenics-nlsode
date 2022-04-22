@@ -4,6 +4,7 @@ _skbuild/
 cpp/nlsode/version.h
 *.pvd
 *.vtu
+python/nlsode/include
 # Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,python,c++,cmake
 # Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,python,c++,cmake
 
