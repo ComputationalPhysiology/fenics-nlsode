@@ -1,5 +1,5 @@
-#include <dolfin.h>
-
+//#include <dolfin.h>
+#include <dolfin/nls/NewtonSolver.h>
 namespace nlsode
 {
 

@@ -28,10 +28,9 @@ option(BUILD_SHARED_LIBS "Build nlsode with shared libraries." ON)
 add_feature_info(BUILD_SHARED_LIBS BUILD_SHARED_LIBS "Build nlsode with shared libraries.")
 option(BUILD_TESTS "Build the test suite." OFF)
 
-find_package(dolfin REQUIRED)
+# find_package(dolfin REQUIRED)
 # find_package(goss REQUIRED)
-
-include(${DOLFIN_USE_FILE})
+# include(${DOLFIN_USE_FILE})
 
 feature_summary(WHAT ALL)
 

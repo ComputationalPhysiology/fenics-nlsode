@@ -1,7 +1,21 @@
-#include <dolfin.h>
-#include <nlsode/NewtonSolver.h>
 #include <pybind11/pybind11.h>
 #include <pybind11/stl.h>
+
+#include <dolfin/common/Variable.h>
+#include <dolfin/parameter/Parameters.h>
+#include <dolfin/la/GenericLinearAlgebraFactory.h>
+#include <dolfin/la/GenericLinearSolver.h>
+#include <dolfin/la/GenericMatrix.h>
+#include <dolfin/la/GenericVector.h>
+#include <dolfin/la/PETScObject.h>
+#include <dolfin/nls/NewtonSolver.h>
+#include <dolfin/nls/PETScSNESSolver.h>
+#include <dolfin/nls/PETScTAOSolver.h>
+#include <dolfin/nls/TAOLinearBoundSolver.h>
+#include <dolfin/nls/NonlinearProblem.h>
+#include <dolfin/nls/OptimisationProblem.h>
+
+#include <nlsode/NewtonSolver.h>
 
 #include <memory>
 #include <vector>
