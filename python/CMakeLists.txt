@@ -47,7 +47,7 @@ if (UFC_INCLUDE_DIR)
   mark_as_advanced(UFC_INCLUDE_DIRS)
 
   execute_process(
-    COMMAND ${PYTHON_EXECUTABLE} -c "import ffc, sys; sys.stdout.write(ffc.__version__)"
+    COMMAND ${Python3_EXECUTABLE} -c "import ffc, sys; sys.stdout.write(ffc.__version__)"
     OUTPUT_VARIABLE UFC_VERSION
     )
   mark_as_advanced(UFC_VERSION)
@@ -64,7 +64,7 @@ if (UFC_INCLUDE_DIR)
   mark_as_advanced(UFC_VERSION_OK)
 
   execute_process(
-    COMMAND ${PYTHON_EXECUTABLE} -c "import ffc, sys; sys.stdout.write(ffc.ufc_signature())"
+    COMMAND ${Python3_EXECUTABLE} -c "import ffc, sys; sys.stdout.write(ffc.ufc_signature())"
     OUTPUT_VARIABLE UFC_SIGNATURE
     )
   mark_as_advanced(UFC_SIGNATURE)
@@ -79,10 +79,10 @@ find_package_handle_standard_args(UFC
                                   UFC_VERSION_OK
                                   UFC_SIGNATURE)
 
-set_package_properties(UFC PROPERTIES TYPE REQUIRED
-  DESCRIPTION "Unified language for form-compilers (part of FFC)"
-  URL "https://bitbucket.org/fenics-project/ffc")
-include_directories(${UFC_INCLUDE_DIRS})
+# set_package_properties(UFC PROPERTIES TYPE REQUIRED
+#   DESCRIPTION "Unified language for form-compilers (part of FFC)"
+#   URL "https://bitbucket.org/fenics-project/ffc")
+# include_directories(${UFC_INCLUDE_DIRS})
 
 # See https://gitlab.kitware.com/cmake/cmake/-/issues/16414
 if (TARGET nlsode)
